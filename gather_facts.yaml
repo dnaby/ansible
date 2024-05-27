@@ -1,0 +1,6 @@
+- name: playbook de test des gather facts
+  hosts: all
+  tasks:
+  - name: ping
+    debug:
+      var: ansible_facts

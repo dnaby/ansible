@@ -1,0 +1,11 @@
+---
+- name: Vérification de l'utilisation de la mémoire
+  hosts: all
+  tasks:
+    - name: Vérifier l'utilisation de la mémoire
+      ansible.builtin.shell: free -m
+      register: memory_usage
+
+    - name: Afficher l'utilisation de la mémoire
+      ansible.builtin.debug:
+        msg: "{{ memory_usage.stdout }}"

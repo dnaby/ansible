@@ -1,0 +1,10 @@
+---
+- name: Debug extra_vars in Ansible
+  hosts: localhost
+  tasks:
+    - name: Display username
+      debug:
+        var: username
+    - name: Display password
+      debug:
+        var: password
